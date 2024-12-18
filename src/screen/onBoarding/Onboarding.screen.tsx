@@ -11,18 +11,18 @@ const OnBoarding = () => {
       onDone={() => navigation.navigate("AppTab")}
       pages={[
         {
-          backgroundColor: "#FFEBD0", // Fondo beige claro
+          backgroundColor: "#FFEBD0", 
           image: (
             <Image
               style={styles.image}
               source={require('../../assets/img/Bank.png')}
             />
           ),
-          title: "Welcome to Fintrack",
+          title: "Welcome to Budgetify",
           subtitle: "",
         },
         {
-          backgroundColor: "#F5F5DC", // Fondo beige
+          backgroundColor: "#F5F5DC", 
           image: (
             <Image
               style={styles.image}
@@ -33,7 +33,7 @@ const OnBoarding = () => {
           subtitle: "You can enter expenses and income that you did not count at any time.",
         },
         {
-          backgroundColor: "#FFEDD5", // Fondo amarillo claro
+          backgroundColor: "#FFEDD5",
           image: (
             <Image
               style={styles.image}
@@ -44,7 +44,7 @@ const OnBoarding = () => {
           subtitle: "Charts of expenditures and remaining budget will be shown.",
         },
         {
-          backgroundColor: "#3C4A59", // Fondo azul oscuro
+          backgroundColor: "#3C4A59", 
           image: (
             <Image
               style={styles.image}

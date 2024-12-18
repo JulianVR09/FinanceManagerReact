@@ -29,7 +29,7 @@ const useLogin = () => {
       console.log(response)
       if ('data' in response && response.code === 201) {
         const { accessToken, id, name } = response.data;
-        await saveSessionInfo(id, accessToken, name)
+        await saveSessionInfo(id, name, accessToken)
         console.log('Session saved:', id, name, accessToken);
         setForm({email: '', password: ''});
         navigation.navigate('Home');

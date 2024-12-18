@@ -73,7 +73,8 @@ const styles = StyleSheet.create({
     borderColor: '#777',
     borderWidth: 1,
     borderRadius: 25,
-    fontSize: 18,
+    fontSize: 14,
+    color: '#000'
   },
   labelContainer: {
     position: 'absolute',

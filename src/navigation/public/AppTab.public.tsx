@@ -1,9 +1,9 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
-import TabBarIcon from "./TabBarIcon";
-import Login from "../screen/login/Login.screen";
-import Singup from "../screen/singup/Singup.screen";
-import { MainScreen } from "../types/mainScreen";
+import TabBarIcon from "../hook/TabBarIcon";
+import Login from "../../screen/login/Login.screen";
+import Singup from "../../screen/singup/Singup.screen";
+import { MainScreen } from "../../types/mainScreen";
 
 const Tab = createBottomTabNavigator<MainScreen>();
 

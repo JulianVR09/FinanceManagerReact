@@ -1,79 +1,136 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Budgetify - Personal Finance Management App 📊
 
-# Getting Started
+**Budgetify** is a React Native application designed to help users efficiently manage their personal finances. The app includes features such as user authentication, onboarding, permissions, and robust budget and transaction management.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+---
 
-## Step 1: Start the Metro Server
+## Features 🚀
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+### **1. Onboarding**
+**Description**:  
+When opening the app for the first time, users will see a series of introductory screens highlighting the main features of Budgetify.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+**Logic**:  
+Once completed, the onboarding screens will not appear again (state stored with **AsyncStorage**).
 
+**Highlights**:
+- App overview.
+- Managing income, expenses, and budgets.
+- Benefits of financial control.
+
+---
+
+### **2. Authentication (Login and Registration)**
+
+**Login**:
+- Users can log in by providing their **email** and **password**.
+- Validates credentials and redirects to the main screen upon success.
+
+**Registration**:
+- Users can create a new account by providing:
+  - **Full Name**
+  - **Email Address**
+  - **Password**
+- Validates fields and detects already-registered emails.
+
+---
+
+### **3. Permissions**
+
+**Storage**:
+- Requests permissions to upload images from the gallery (useful for associating receipts or proof of transactions).
+
+**Location (Optional)**:
+- Requests permission to access the device's location (useful for logging locations associated with certain expenses).
+
+---
+
+### **4. Home (Main Screen)**
+**Description**:  
+The main screen provides an overview of the user's finances and a list of recent transactions.
+
+**Features**:
+- **Budget Overview**: Displays total income, total expenses, and available balance.
+- **Recent Transactions List**: Shows transactions with basic details (date, description, category, amount).
+- **Transaction Search**: Allows users to search for transactions by name, category, or amount.
+- **Floating Button**: Quick access to add new transactions.
+
+---
+
+### **5. Transaction Management**
+
+**Add Transaction**:
+Users can add a new transaction with the following details:
+- **Type**: Income or Expense.
+- **Name/Description**.
+- **Category** (e.g., Food, Transportation, Entertainment, etc.).
+- **Date** (selectable).
+- **Amount**.
+- **Image** (optional, such as receipts or proof of payment).
+
+**Edit Transaction**:
+- Allows users to modify the details of an existing transaction.
+
+**Delete Transaction**:
+- Provides the option to remove a transaction from the list.
+
+---
+
+### **6. Budget Management**
+
+**Add Budget**:
+- Users can set a monthly budget or category-specific budgets (e.g., $200 for "Food").
+
+**Visualization**:
+- Visual indicators to show how much of the budget has been spent.
+
+
+
+---
+
+## Technologies Used 🛠️
+
+- **React Native**: Main framework for app development.
+- **AsyncStorage**: Local storage to manage app state (onboarding, preferences).
+- **React Navigation**: For navigation between screens (Onboarding, Login, Home, etc.).
+
+### **Additional Libraries**:
+- Permissions Handling: **react-native-permissions**.
+- Date Handling: **Luxon** or **Date-fns** (for date selection and formatting).
+- Data Visualization: **Victory Native** or **react-native-chart-kit** (for income/expense graphs).
+
+---
+
+## Installation and Setup 🔧
+
+### **1. Clone the repository**:
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+git clone https://github.com/yourusername/budgetify.git
 ```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
+### **2. Install dependencies**:
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+npm install
 ```
 
-### For iOS
+### **3. Configure necessary permissions**:
+- **Android**: Edit `AndroidManifest.xml` to add storage and location permissions.
+- **iOS**: Configure permissions in `Info.plist`.
 
+### **4. Run the app**:
 ```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+npm run android   
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+---
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## App Screens 📸
 
-## Step 3: Modifying your App
+1. **Onboarding**: Introduces the app's purpose and features.
+2. **Login**: Login screen for existing users.
+3. **SignUp**: Registration screen for new users.
+4. **Home**: Dashboard showing financial overview and recent transactions.
 
-Now that you have successfully run the app, let's modify it.
+---
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.

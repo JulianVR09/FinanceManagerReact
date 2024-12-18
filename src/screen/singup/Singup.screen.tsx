@@ -15,7 +15,7 @@ import {
 import useSignup from './hook/useSignup';
 import Input from '../../components/input/Input.component';
 
-const Signup = () => {
+const Singup = () => {
   const {form, handleChange, onSubmit, loading, error} = useSignup();
 
   const handlePress = () => {
@@ -75,7 +75,7 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Singup;
 
 const styles = StyleSheet.create({
   container: {
