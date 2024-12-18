@@ -127,9 +127,17 @@ npm run android
 ## App Screens 📸
 
 1. **Onboarding**: Introduces the app's purpose and features.
+![Texto alternativo](./src/assets/img/onboarding1.jpg)
+![Texto alternativo](./src/assets/img/onboarding2.jpg)
+![Texto alternativo](./src/assets/img/onboarding3.jpg)
+![Texto alternativo](./src/assets/img/onboarding4.jpg)
 2. **Login**: Login screen for existing users.
+![Texto alternativo](./src/assets/img/login.jpg)
+![Texto alternativo](./src/assets/img/login2.jpg)
 3. **SignUp**: Registration screen for new users.
+![Texto alternativo](./src/assets/img/singup.jpg)
 4. **Home**: Dashboard showing financial overview and recent transactions.
+![Texto alternativo](./src/assets/img/Home.jpg)
 
 ---
 
